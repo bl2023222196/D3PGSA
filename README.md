@@ -21,8 +21,7 @@ The repository includes:
 ```text
 D3PGSA_EVCS_DynamicPricing/
 ├── README.md               # Project overview and instructions
-├── Paper/
-│   └── D3PGSA.pdf          # The submitted manuscript
+│ 
 ├── Code/
 │   ├── DPGSA.ipynb              # Main training and testing script
 │   ├── chargenv.py             # EVCS Environment
