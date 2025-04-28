@@ -22,17 +22,16 @@ The repository includes:
 D3PGSA_EVCS_DynamicPricing/
 ├── README.md               # Project overview and instructions
 ├── Paper/
-│   └── D3PGSA_Paper.pdf     # The submitted manuscript
+│   └── D3PGSA.pdf          # The submitted manuscript
 ├── Code/
-│   ├── main.py              # Main training and testing script
-│   ├── model.py             # D³PGSA model implementation
-│   ├── utils.py             # Utility functions
+│   ├── DPGSA.ipynb              # Main training and testing script
+│   ├── chargenv.py             # EVCS Environment
+│   ├── EV.py                  # EVs
 │   └── requirements.txt     # Python environment dependencies
 ├── Data/
-│   ├── sample_dataset.csv   # Example dataset (small-scale)
-│   └── README.txt           # Instructions for obtaining full datasets
+│   ├── ACN-Data.csv   
+│   └── EV Charging Reports.csv           
 ├── Results/
-│   ├── figures/             # Experimental figures
-│   └── logs/                # Training logs
-└── scripts/
-    └── run_experiment.sh    # Example script for running experiments
+│   
+└── Model/
+   
