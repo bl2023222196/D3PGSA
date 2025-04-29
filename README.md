@@ -51,7 +51,7 @@ The learning behavior of D³PGSA during training is illustrated below.
 
 ### 1.1 Training Loss Curve
 
-![Training Loss](Images/D3PGSA1.png)
+![Training Loss](Images/2.png)
 
 *Figure 1: Training loss curve of D³PGSA over epochs. A steady convergence trend is observed, indicating stable learning.*
 
@@ -59,7 +59,7 @@ The learning behavior of D³PGSA during training is illustrated below.
 
 ### 1.2 Policy Evaluation Scores
 
-![Policy Evaluation](Results/Figures/9.png)
+![Policy Evaluation](Images/3.png)
 
 *Figure 2: Policy evaluation scores during training episodes, reflecting policy improvement across time.*
 
@@ -71,7 +71,7 @@ Performance comparisons between D³PGSA and baseline algorithms on different dat
 
 ### 2.1 LiteDemand Dataset
 
-![LiteDemand Comparison](Results/figures/litedemand_bar.png)
+![LiteDemand Comparison](Images/4.png)
 
 *Figure 3: Average revenue achieved by different algorithms on the LiteDemand dataset. D³PGSA outperforms all baselines.*
 
@@ -79,7 +79,7 @@ Performance comparisons between D³PGSA and baseline algorithms on different dat
 
 ### 2.2 HeavyHub Dataset
 
-![HeavyHub Comparison](Results/figures/heavyhub_bar.png)
+![HeavyHub Comparison](Images/5.png)
 
 *Figure 4: Average revenue comparison on the HeavyHub dataset under high-demand conditions.*
 
@@ -117,7 +117,7 @@ Complementary visualizations provide further insights into the experimental outc
 
 ### 4.1 Scatter Plot of Test Results
 
-![Test Scatter](Results/figures/test_scatter.png)
+![Test Scatter](Images/6.png)
 
 *Figure 5: Scatter plot showing the distribution of revenues across various test scenarios.*
 
@@ -125,7 +125,7 @@ Complementary visualizations provide further insights into the experimental outc
 
 ### 4.2 Charging Demand Distribution
 
-![Demand Histogram](Results/figures/demand_histogram.png)
+![Demand Histogram](Images/7.png)
 
 *Figure 6: Histogram of charging demand distribution, illustrating peak and valley periods.*
 
