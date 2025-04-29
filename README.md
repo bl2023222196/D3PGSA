@@ -37,49 +37,6 @@ D3PGSA/
 └── requirements.txt
 ```
 ---
-# Model Description
-
-This section introduces the core framework of D³PGSA and its three key components:
-the experience generation model, feature generation model, and dual-critic architecture.
-
-## 1. D³PGSA
-D³PGSA (Dual-value Deep Deterministic Policy Gradient based on Sample Augmentation) is a reinforcement learning framework designed to address the challenges of dynamic pricing for electric vehicle charging stations (EVCS), especially under limited data, non-stationary demand, and training instability.
-
-D³PGSA enhances the traditional DDPG algorithm by incorporating three synergistic modules:
-
-An experience generation model to augment training samples;
-
-A feature generation and clustering model to encode structural properties of state space;
-
-A dual-critic network to suppress overestimation bias in value functions.
-
-Together, these modules improve sample efficiency, policy robustness, and generalization in complex, dynamic environments.
-![Demand Histogram](Images/2.png)
-
-## 2. Experience Generation Model
-To address data scarcity in real-world applications, D³PGSA introduces an experience generation module that produces high-quality synthetic transitions.
-
-This model learns a behavior model or transition model from historical state-action-reward sequences and generates additional virtual samples for training.
-
-The generated samples are combined with real experience in the replay buffer using a dynamic weighting strategy.
-![Demand Histogram](Images/3.png)
-## 3. Feature Generation Model
-The feature generation module encodes and clusters raw states to improve policy generalization and experience utilization.
-
-It consists of:
-
-A state encoder (e.g., SimSiam or self-supervised learning module) for latent feature extraction;
-
-A DBSCAN-based clustering mechanism.
-![Demand Histogram](Images/4.png)
-## 4. Dual-value Network
-
-To mitigate the well-known overestimation bias in value learning, D³PGSA adopts a dual-critic network structure.
-
-It maintains two independent Q-value estimators Q₁(s,a) and Q₂(s,a) and uses the minimum value min(Q₁, Q₂) for target calculation during policy updates.
-![Demand Histogram](Images/5.png)
-
-
 
 # Experimental Results
 
@@ -91,19 +48,19 @@ This section presents key experimental results from our study, including trainin
 
 The learning behavior of D³PGSA during training is illustrated below.
 
-### 1.1 Training Loss Curve
+### 1.1 Training Reward Curves
 
-![Demand Histogram](Images/7.png)
+![Demand Histogram](Images/8.png)
 
-*Figure 1: Training loss curve of D³PGSA over epochs. A steady convergence trend is observed, indicating stable learning.*
+*Figure 1: Reward curve of D³PGSA and other algorithms over epochs.*
 
 ---
 
-### 1.2 Policy Evaluation Scores
+  ### 1.2  Solution Time Curves 
 
 ![Demand Histogram](Images/7.png)
 
-*Figure 2: Policy evaluation scores during training episodes, reflecting policy improvement across time.*
+*Figure 2: Reward curve of D³PGSA and other algorithms over epochs.*
 
 ---
 
