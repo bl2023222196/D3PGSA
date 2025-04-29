@@ -59,7 +59,7 @@ The learning behavior of D³PGSA during training is illustrated below.
 
 ### 1.2 Policy Evaluation Scores
 
-![Policy Evaluation](Results/figures/evaluation_score.png)
+![Policy Evaluation](Results/Figures/9.png)
 
 *Figure 2: Policy evaluation scores during training episodes, reflecting policy improvement across time.*
 
