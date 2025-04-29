@@ -22,7 +22,7 @@ The repository includes:
 
 ## Repository Structure
 
-text
+```text
 D3PGSA_EVCS_DynamicPricing/
 ├── README.md               # Project overview and instructions
 │   
@@ -51,7 +51,7 @@ The learning behavior of D³PGSA during training is illustrated below.
 
 ### 1.1 Training Loss Curve
 
-![Training Loss](Results/figures/training_curve.png)
+![Training Loss](Results/Figures/8.png)
 
 *Figure 1: Training loss curve of D³PGSA over epochs. A steady convergence trend is observed, indicating stable learning.*
 
