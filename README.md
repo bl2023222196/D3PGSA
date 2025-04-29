@@ -2,10 +2,6 @@
 
 This repository provides the code, sample data, and experimental results for our paper:
 
-> **D³PGSA: A Dual-value Deep Deterministic Policy Gradient based on Sample Augmentation for Dynamic Pricing of EV Charging Stations**  
-> Authors: [Anonymous for Review]  
-> Status: Submitted to [Journal/Conference Name], under review.
-
 ## Overview
 
 This project aims to address the dynamic pricing problem for electric vehicle charging stations (EVCS) under uncertain and dynamic demand conditions. We propose D³PGSA, an enhanced reinforcement learning framework that integrates experience generation, feature-based DBSCAN clustering, and a dual-critic architecture to improve policy learning effectiveness.
@@ -45,7 +41,7 @@ This section presents key experimental results from our study, including trainin
 The following figure shows the training loss curve and policy evaluation during training.
 
 ### 1.1 Training Loss Curve
-![Training Loss](Results/figures/training_curve.png)
+![Training Loss](Results/Figures/2.png)
 
 ### 1.2 Policy Evaluation Scores
 ![Policy Evaluation](Results/figures/evaluation_score.png)
