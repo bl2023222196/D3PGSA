@@ -36,7 +36,7 @@ D3PGSA_EVCS_DynamicPricing/
 ├── Results/
 │   └── Figures/                
 └── requirements.txt
-
+```
 ---
 
 # Experimental Results
