@@ -2,7 +2,7 @@
 
 This repository provides the code, dataset, and experimental results for our paper:
 
-> **D³PGSA: A Dual-value Deep Deterministic Policy Gradient based on Sample Augmentation for Dynamic Pricing of EV Charging Stations**  
+> **D³PGSA: A Dual-value Deep Deterministic Policy Gradient based on Sample Augmentation for Dynamic Pricing of EV Charging Station**  
 > Status: Submitted to IEEE Transactions on Intelligent Transportation Systems, In Revision.
 
 ---
@@ -23,7 +23,7 @@ The repository includes:
 ## Repository Structure
 
 ```text
-D3PGSA_EVCS_DynamicPricing/
+D3PGSA/
 ├── README.md               # Project overview and instructions
 │   
 ├── Code/
@@ -33,11 +33,53 @@ D3PGSA_EVCS_DynamicPricing/
 ├── Data/
 │   ├── ACN-Data.csv               
 │   └── EV Charging Reports.csv           
-├── Results/
-│   └── Figures/                
+├── Results/   
 └── requirements.txt
 ```
 ---
+# Model Description
+
+This section introduces the core framework of D³PGSA and its three key components:
+the experience generation model, feature generation model, and dual-critic architecture.
+
+## 1. D³PGSA
+D³PGSA (Dual-value Deep Deterministic Policy Gradient based on Sample Augmentation) is a reinforcement learning framework designed to address the challenges of dynamic pricing for electric vehicle charging stations (EVCS), especially under limited data, non-stationary demand, and training instability.
+
+D³PGSA enhances the traditional DDPG algorithm by incorporating three synergistic modules:
+
+An experience generation model to augment training samples;
+
+A feature generation and clustering model to encode structural properties of state space;
+
+A dual-critic network to suppress overestimation bias in value functions.
+
+Together, these modules improve sample efficiency, policy robustness, and generalization in complex, dynamic environments.
+![Demand Histogram](Images/2.png)
+
+## 2. Experience Generation Model
+To address data scarcity in real-world applications, D³PGSA introduces an experience generation module that produces high-quality synthetic transitions.
+
+This model learns a behavior model or transition model from historical state-action-reward sequences and generates additional virtual samples for training.
+
+The generated samples are combined with real experience in the replay buffer using a dynamic weighting strategy.
+![Demand Histogram](Images/3.png)
+## 3. Feature Generation Model
+The feature generation module encodes and clusters raw states to improve policy generalization and experience utilization.
+
+It consists of:
+
+A state encoder (e.g., SimSiam or self-supervised learning module) for latent feature extraction;
+
+A DBSCAN-based clustering mechanism.
+![Demand Histogram](Images/4.png)
+## 4. Dual-value Network
+
+To mitigate the well-known overestimation bias in value learning, D³PGSA adopts a dual-critic network structure.
+
+It maintains two independent Q-value estimators Q₁(s,a) and Q₂(s,a) and uses the minimum value min(Q₁, Q₂) for target calculation during policy updates.
+![Demand Histogram](Images/5.png)
+
+
 
 # Experimental Results
 
