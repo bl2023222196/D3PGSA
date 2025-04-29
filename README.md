@@ -51,7 +51,7 @@ The learning behavior of D³PGSA during training is illustrated below.
 
 ### 1.1 Training Loss Curve
 
-![Training Loss](Results/Figures/8.png)
+![Training Loss](Images/8.png)
 
 *Figure 1: Training loss curve of D³PGSA over epochs. A steady convergence trend is observed, indicating stable learning.*
 
