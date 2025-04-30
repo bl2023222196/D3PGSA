@@ -96,7 +96,7 @@ Soft updates and performance monitoring
 Modify the following variables in the script as needed:
 | Parameter        | Description                          | Example      |
 |------------------|--------------------------------------|--------------|
-| `Num_data`       | Number of each dataset               | `5`          |
+| `Num_data`       | Number of each dataset               | `6`          |
 | `num_episodes`   | Total training episodes              | `1000`       |
 | `action_bound`   | Max charging power per time slot     | `0.5`        |
 | `buffer_size`    | Size of replay buffer                | `40000`      |
