@@ -51,9 +51,14 @@ Install all required Python packages using:
 pip install -r requirements.txt
 ```
 ---
+### 2. Data Preparation
 
+Please ensure your dataset is stored at:
 
-
+```bash
+./datasets/{dataset_name}.csv
+```
+---
 # Experimental Results
 
 This section presents key experimental results from our study, including training dynamics, comparative evaluations, and statistical analyses.
