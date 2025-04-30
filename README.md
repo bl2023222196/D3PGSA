@@ -69,7 +69,7 @@ The training includes:
 
 Actor-Critic model with dual Q-networks
 
-Experience generation and clustering using autoencoder + DBSCAN
+Experience generation and clustering using simsiam + DBSCAN
 
 Adaptive exploration via noise decay
 
