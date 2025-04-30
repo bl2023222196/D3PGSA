@@ -48,6 +48,7 @@ Install all required Python packages using:
 
 ```bash
 pip install -r requirements.txt
+```
 ---
 
 
