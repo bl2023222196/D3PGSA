@@ -76,14 +76,33 @@ Adaptive exploration via noise decay
 Soft updates and performance monitoring
 
 ---
-### 4. Outputs
+### 4. Key Configurations
+Modify the following variables in the script as needed:
+| Parameter        | Description                          | Example      |
+|------------------|--------------------------------------|--------------|
+| `Num_data`       | Number of each dataset               | `5`          |
+| `num_episodes`   | Total training episodes              | `1000`       |
+| `action_bound`   | Max charging power per time slot     | `0.5`        |
+| `buffer_size`    | Size of replay buffer                | `40000`      |
+| `sigma`          | Initial exploration noise (Gaussian) | `0.5`        |
+| `critic_lr`      | Learning rate of critic              | `0.002`      |
+| `actor_lr`       | Learning rate of actor               | `0.002`      |
+| `gamma`       | Decay factor               | `0.98`      |
+| `tau`       | Soft update parameter               | `0.001`      |
+| `batch_size`       | Experience sample size               | `128`      |
+### 5. Outputs
 After training, the following files are generated:
 | Output Type    | Path                                                | Description                        |
 |----------------|-----------------------------------------------------|------------------------------------|
 | Trained Actor  | `./model/actor_D3PGSA{}.pth`                       | Best actor model checkpoint        |
 | Training Log   | `./result/train/D3PGSA{}.csv`                      | Episode returns saved as `.csv`   |
 | Training Curve | Shown via `matplotlib.pyplot`                      | Return vs. episode plot            |
+### 6. Evaluate Trained Model
+```bash
+agent.actor.load_state_dict(torch.load('./model/actor_D3PGSA{}.pth'))
 
+```
+Then interact with the environment using env.step().
 
 # Experimental Results
 
