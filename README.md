@@ -27,9 +27,10 @@ D3PGSA/
 ├── README.md               # Project overview and instructions
 │   
 ├── Code/
-│   ├── D3PGSA.ipynb              # Main training and testing script
-│   ├── chargenv.py             # D³PGSA model implementation
-│   └── EV.py    # Python environment dependencies
+│   ├── D3PGSA.ipynb             
+│   ├── chargenv.py             
+│   ├── EV.py                 
+│   └── Comparison_Algorithm/
 ├── Data/
 │   ├── ACN-Data.csv               
 │   └── EV Charging Reports.csv           
@@ -37,6 +38,19 @@ D3PGSA/
 └── requirements.txt
 ```
 ---
+
+
+## 🔧 Running the Code
+
+### 1. Environment Setup
+
+Install all required Python packages using:
+
+```bash
+pip install -r requirements.txt
+---
+
+
 
 # Experimental Results
 
