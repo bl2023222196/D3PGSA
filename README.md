@@ -120,6 +120,10 @@ agent.actor.load_state_dict(torch.load('./model/actor_D3PGSA{}.pth'))
 ```
 Then interact with the environment using env.step().
 
+# 💡Statement of Major Changes in Experimental Results due to Dataset Modification
+
+We have comprehensively updated and restructured all experimental datasets used in the original submission. These updates involve the inclusion of two additional real-world datasets, the reconstruction of four synthetic datasets, and a refinement of the temporal resolution in processing vehicle charging events to more accurately capture realistic charging behaviors. These modifications have resulted in notable changes to the input distributions and scenario configurations. Consequently, all experimental results—including performance metrics, tables, and figures—have been fully re-generated. These updates stem solely from adjustments to the experimental design, with the proposed methodology itself remaining unchanged.
+
 # Experimental Results
 
 This section presents key experimental results from our study, including training dynamics, comparative evaluations, and statistical analyses.
