@@ -126,7 +126,7 @@ The performance of D³PGSA during training is shown below.
 
 ![Solution Time Curves ](Images/7.png)
 
-*Figure 2: Reward curve of D³PGSA and other algorithms over epochs.*
+*Figure 2: Solution time curves of D³PGSA and heuristic algorithms.*
 
 ---
 
@@ -247,7 +247,7 @@ The following table presents the performance of D³PGSA under different learning
 
 ### 3.2 Ablation Experiments
 
-![Hidden Neurons](Images/10.png)
+![Ablation Neurons](Images/10.png)
 
 *Figure 4: Ablation experiment results*
 
