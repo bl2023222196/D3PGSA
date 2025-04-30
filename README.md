@@ -59,6 +59,32 @@ Please ensure your dataset is stored at:
 ./datasets/{dataset_name}.csv
 ```
 ---
+
+### 3. Start Training
+
+```bash
+python D3PGSA.ipynb
+```
+The training includes:
+
+Actor-Critic model with dual Q-networks
+
+Experience generation and clustering using autoencoder + DBSCAN
+
+Adaptive exploration via noise decay
+
+Soft updates and performance monitoring
+
+---
+### 4. Outputs
+After training, the following files are generated:
+| Output Type    | Path                                                | Description                        |
+|----------------|-----------------------------------------------------|------------------------------------|
+| Trained Actor  | `./model/actor_D3PGSA{}.pth`                       | Best actor model checkpoint        |
+| Training Log   | `./result/train/D3PGSA{}.csv`                      | Episode returns saved as `.csv`   |
+| Training Curve | Shown via `matplotlib.pyplot`                      | Return vs. episode plot            |
+
+
 # Experimental Results
 
 This section presents key experimental results from our study, including training dynamics, comparative evaluations, and statistical analyses.
