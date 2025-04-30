@@ -65,6 +65,22 @@ Please ensure your dataset is stored at:
 ```bash
 python D3PGSA.ipynb
 ```
+Please modify the dataset name and Num_data in the script before execution, to ensure:
+
+The correct dataset file is loaded from ./datasets/{dataset_name}.csv
+
+Model parameters are saved with the correct identifier
+
+During testing, the correct model checkpoint can be reloaded
+
+For example, change these lines in the script:
+
+```bash
+Num_data = 6
+dataset = 'EV Charging Reports'
+data_path = './datasets/{}.csv'.format(dataset)
+```
+
 The training includes:
 
 Actor-Critic model with dual Q-networks
