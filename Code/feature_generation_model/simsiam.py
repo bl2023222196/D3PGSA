@@ -79,7 +79,7 @@ class SimSiam(nn.Module):
         return p1, p2, z1.detach(), z2.detach()
 def sim_siam_loss(p1, p2, z1, z2):
     criterion = nn.CosineSimilarity(dim=1)
-    loss = -(criterion(p1, z2).mean() + criterion(p2, z1).mean()) * 0.5
+    loss = -(criterion(p1, z2).mean() + criterion(p2, z1).mean()) * 0.3
     return loss
 
 # 假设 dataloader 是你的数据加载器
