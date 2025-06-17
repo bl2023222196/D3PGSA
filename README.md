@@ -158,7 +158,7 @@ Performance comparisons between D³PGSA and other algorithms on different datase
 
 ### 📊 Table: Comparative Experimental Results of Different Algorithms on Six Datasets
 
-| Dataset               | Metric | GWO              | WSO[32]          | NSGAII[29]       | DDPG[34]         | TD3[39]          | PPO-Clip        | DSAC[43]         | D³PGSA           |
+| Dataset               | Metric | GWO              | WSO          | NSGAII       | DDPG         | TD3         | PPO-Clip        | DSAC         | D³PGSA           |
 |-----------------------|--------|------------------|------------------|------------------|------------------|------------------|------------------|------------------|------------------|
 | **Lite Demand**       | AR     | 788.37 ± 6.00    | 938.54 ± 46.05   | 867.57 ± 111.66  | 870.46 ± 2.34    | 806.85 ± 5.12    | 978.56 ± 1.16    | 1014.94 ± 1.53   | 1029.73 ± 0.98   |
 |                       | WDG    | 1.20% ± 1.66%    | 20.47% ± 6.02%   | 11.17% ± 12.41%  | 11.75% ± 2.50%   | 3.58% ± 1.86%    | 25.63% ± 2.86%   | 30.31% ± 3.10%   | 32.20% ± 2.93%   |
@@ -187,7 +187,7 @@ Performance comparisons between D³PGSA and other algorithms on different datase
 
 ## Statistical Significance (t-test)
 
-| Dataset               | Metric     | GWO        | WSO[32]    | NSGAII[29] | DDPG[34]   | TD3[39]    | PPO-Clip   | DSAC[43]   |
+| Dataset               | Metric     | GWO        | WSO    | NSGAII | DDPG   | TD3    | PPO-Clip   | DSAC   |
 |-----------------------|------------|------------|------------|------------|------------|------------|------------|------------|
 | **Lite Demand**       | t-value    | 88.7959    | 4.4266     | 3.2474     | 140.4631   | 95.5044    | **75.3331**| 18.1822    |
 |                       | p-value    | 2.89E-13   | 0.0022     | 0.0117     | 7.38E-15   | 1.61E-13   | **1.07E-12**| 8.60E-08   |
@@ -215,7 +215,7 @@ Performance comparisons between D³PGSA and other algorithms on different datase
 
 ## Detailed AR and TWREI Results
 
-| Dataset               | Metric | GWO              | WSO[32]          | NSGAII[29]       | DDPG[34]         | TD3[39]          | PPO-Clip         | DSAC[43]         | D³PGSA           |
+| Dataset               | Metric | GWO              | WSO          | NSGAII       | DDPG         | TD3          | PPO-Clip         | DSAC         | D³PGSA           |
 |-----------------------|--------|------------------|------------------|------------------|------------------|------------------|------------------|------------------|------------------|
 | **LiteDemand**        | AR     | 788.37 ± 7.45    | 938.54 ± 57.18   | 867.57 ± 138.64  | 870.46 ± 2.90    | 806.85 ± 6.36    | 978.56 ± 1.44    | 1014.94 ± 1.90   | **1029.73 ± 1.22** |
 |                       | TWREI  | 0.03 ± 0.06      | 0.67 ± 0.22      | 0.41 ± 0.50      | 0.70 ± 0.06      | 0.40 ± 0.06      | 1.19 ± 0.02      | 1.28 ± 0.02      | **1.32 ± 0.01**    |
