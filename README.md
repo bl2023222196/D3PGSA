@@ -111,7 +111,7 @@ After training, the following files are generated:
 | Output Type    | Path                                                | Description                        |
 |----------------|-----------------------------------------------------|------------------------------------|
 | Trained Actor  | `./model/actor_D3PGSA{}.pth`                       | Best actor model checkpoint        |
-| Training Log   | `./result/train/D3PGSA{}.csv`                      | Episode returns saved as `.csv`   |
+| Training Result   | `./result/train/D3PGSA{}.csv`                      | Episode returns saved as `.csv`   |
 | Training Curve | Shown via `matplotlib.pyplot`                      | Return vs. episode plot            |
 ### 6. Evaluate Trained Model
 ```bash
