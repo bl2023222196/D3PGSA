@@ -167,7 +167,7 @@ class Env:
 
             arriving_evs = self.evs.get_evs_at_time(self.current_datetime)
             for vehicle in arriving_evs:
-                vehicle.cs_idx = vehicle.quary(self.n_cs, self.price, self.waitting_queue, 1)
+                vehicle.cs_idx = vehicle.quary(self.n_cs, self.price, self.waitting_queue, 0.3)
                 cs_idx = vehicle.cs_idx
                 vehicle.make_charging_decision(self.price, self.waitting_rate, 0.3)
                 if vehicle.charge_tag is False:
