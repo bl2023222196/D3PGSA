@@ -31,10 +31,7 @@ D3PGSA/
 │   ├── chargenv.py             
 │   ├── EV.py                 
 │   └── Comparison_Algorithm/
-├── datasets/
-│   ├── ACN-Data.csv               
-│   └── EV Charging Reports.csv           
-├── Results/
+├── datasets/         
 ├── Images/
 └── requirements.txt
 ```
