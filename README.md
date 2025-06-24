@@ -29,8 +29,7 @@ D3PGSA/
 ├── Code/
 │   ├── D3PGSA.ipynb             
 │   ├── chargenv.py             
-│   ├── EV.py                 
-│   └── Comparison_Algorithm/
+│   └── EV.py                 
 ├── datasets/         
 ├── Images/
 └── requirements.txt
