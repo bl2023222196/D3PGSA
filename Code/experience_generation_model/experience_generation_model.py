@@ -14,7 +14,7 @@ blk = lambda ic, oc: nn.Sequential(
 
 class Exp_Gen_Model(nn.Module):
 
-    def __init__(self, n_channel: int, eps: float = 0.002, D: int = 128) -> None:
+    def __init__(self, n_channel: int, eps: float = 0.002, D: int = 128):
         super(Exp_Gen_Model, self).__init__()
         self.eps = eps
         self.freqs = torch.exp(
@@ -45,7 +45,7 @@ class Exp_Gen_Model(nn.Module):
         )
         self.last = nn.Conv2d(2 * D + n_channel, n_channel, 3, padding=1)
 
-    def forward(self, x, t) -> torch.Tensor:
+    def forward(self, x, t):
         if isinstance(t, float):
             t = (
                 torch.tensor([t] * x.shape[0], dtype=torch.float32)
