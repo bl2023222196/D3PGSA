@@ -11,6 +11,8 @@ This repository provides the code, dataset, and experimental results for our pap
 
 This project addresses the dynamic pricing problem for electric vehicle charging stations (EVCS) under uncertain and dynamic demand conditions.  
 We propose D³PGSA, an enhanced reinforcement learning framework that integrates experience generation, feature-based DBSCAN clustering, and a dual-critic architecture to improve policy learning effectiveness.
+The experience generation model is adapted from code provided in this repository: https://github.com/cloneofsimo/consistency_models.
+
 
 The repository includes:
 - The implementation of D³PGSA.
