@@ -1,29 +1,17 @@
-# Implementation of Consistency Model
-# https://arxiv.org/pdf/2303.01469.pdf
-
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
-
 from typing import List
 from tqdm import tqdm
 import math
-
 import torch
 from torch.utils.data import DataLoader
-
-from torchvision.datasets import MNIST, CIFAR10
 from torchvision import transforms
-from torchvision.utils import save_image, make_grid
+
 
 from consistency_models import ConsistencyModel, kerras_boundaries
 class CustomDataset(Dataset):
     def __init__(self, data_list, transform=None):
-        """
-        Args:
-            data_list (list of Tensors): 数据列表，每个元素都是1x1x11的tensor。
-            transform (callable, optional): 一个可选的变换函数/操作，用于对样本进行处理。
-        """
         self.data_list = data_list
         self.transform = transform
 
@@ -37,18 +25,8 @@ class CustomDataset(Dataset):
         return sample
 
 def mnist_dl(data_list):
-    # tf = transforms.Compose([
-    #     # transforms.Pad(2),  # 对于1x1x11的数据可能不需要或不适用
-    #     # transforms.ToTensor(),  # 如果数据已经是Tensor，这一步可以省略
-    #     transforms.Normalize((0.5,), (0.5)),
-    # ])
-
-    # 使用自定义数据集
     dataset = CustomDataset(data_list)
-
-    # 使用DataLoader
     dataloader = DataLoader(dataset, batch_size=32, shuffle=True, num_workers=0)
-
     return dataloader
 
 
@@ -75,7 +53,6 @@ def train(data_list, arrival_rate, device = "cuda:0",n_epoch: int = 200,n_channe
         for x in pbar:
             optim.zero_grad()
             x = x.to(device)
-
             z = torch.randn_like(x)*10
             t = torch.randint(0, N - 1, (x.shape[0], 1), device=device)
             t_0 = boundaries[t]
@@ -110,25 +87,11 @@ def generate(arrival_rate, device = "cuda:0",n_epoch: int = 2,n_channels = 1):
     E = []
     for epoch in range(1, n_epoch):
         with torch.no_grad():
-            # Sample 5 Steps
             xh = model.sample(
                 torch.randn((32, 1, 24, 11)).to(device=device) * 80.0,
                 list(reversed([5.0, 10.0, 20.0, 40.0, 80.0])),
             )
             E.append(xh)
-
-        # xh = (xh * 0.5 + 0.5).clamp(0, 1)
-
-
-        # # Sample 2 Steps
-        # xh = model.sample(
-        #     torch.randn_like(x).to(device=device) * 80.0,
-        #     list(reversed([2.0, 80.0])),
-        # )
-        # xh = (xh * 0.5 + 0.5).clamp(0, 1)
-        # grid = make_grid(xh, nrow=4)
-
-        # save model
     return E
 
 
